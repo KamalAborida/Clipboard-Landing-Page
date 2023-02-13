@@ -2,7 +2,9 @@
 
 :root{
   --green_button_color:hsl(171, 66%, 44%);
+  --green_dark_button_color:hsl(171, 67%, 37%);
   --purble_button_color:hsl(233, 100%, 69%);
+  --purble_dark_button_color:hsl(233, 65%, 59%);
   --dark_heading_color:hsl(210, 10%, 33%);
   --grey_paragraph_color:hsl(201, 11%, 66%);
 }
@@ -57,6 +59,35 @@ img{
 
 i{
   color: var(--dark_heading_color);
+}
+
+.attribution{
+  position: absolute;
+  top: 0;
+  color: rgba(0, 0, 0, 0.2)
+}
+
+.attribution a{
+  color: rgba(0, 0, 0, 0.2)
+}
+
+footer{
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+svg{
+  margin: 10px;
 }
 
 /*General*/
@@ -138,6 +169,66 @@ i{
   margin-bottom: 40px;
 }
 
+.utilities{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+footer > div:first-child{
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+footer > div:first-child img{
+  max-width: 20%;
+}
+
+footer > div:nth-child(2){
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+footer > div:nth-child(3){
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.ios-butt{
+  color: white;
+  background-color: var(--purble_button_color);
+  border: 0;
+  box-shadow: 0 3px 0 0 var(--purble_dark_button_color), 1px 3px 5px 1px rgb(102, 102, 102);
+}
+
+.mac-butt{
+  color: white;
+  background-color: var(--green_button_color);
+  border: 0;
+  box-shadow: 0 3px 0 0 var(--green_dark_button_color), 1px 3px 5px 1px rgb(102, 102, 102);
+}
+
+button:hover{
+  box-shadow: 0 0 0 0 white;
+  filter: contrast(200%);
+  cursor: pointer;
+}
+
+li:hover{
+  color: white;
+  cursor: pointer;
+}
+
+a:hover{
+  color: white;
+  cursor: pointer;
+}
+
 /* Custom Specific */
 
 
@@ -206,6 +297,34 @@ i{
   .computer-features-div > div:first-child{
     position: relative;
     right: 150px;
+  }
+
+  .utilities{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  footer{
+    flex-direction: row;
+  }
+  
+  footer > div:first-child{
+    width: 20%;
+    margin: 0;
+  }
+  
+  footer > div:first-child img{
+    max-width: 20%;
+  }
+  
+  footer > div:nth-child(2){
+    width: 40%;
+    margin: 0;
+  }
+  
+  footer > div:nth-child(3){
+    width: 10%;
   }
 }
 
